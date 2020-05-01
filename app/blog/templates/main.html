@@ -1,10 +1,103 @@
-<html>
-    <p>Hi there!</p>
-    {% for post in posts %}
-        <p>
-            {{ post.name }}
-            <img src="/mediafiles/{{ post.src }}"/>
-            {{ post.text }}
-        </p>
-    {% endfor %}
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8" />
+        <title>сайт-Блог</title>
+        <link rel="stylesheet" href="/mediafiles/design/css/style.css">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <!-- Compiled icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper" class="container">
+<!--            <i class="large material-icons">insert_chart</i>-->
+            <nav class="white" style="overflow: hidden;">
+                <div class="nav-wrapper">
+                    <div class="brand-logo  black-text">
+                        <a href="/" >
+                            <img class="responsive-img" src="/mediafiles/design/logo.svg" style="margin-top: -6px;"/>
+                        </a>
+                        <ul class="right">
+                            <span class="text-logo">Блог</span>
+                        </ul>
+                    </div>
+                    <ul id="nav-mobile" class="right">
+                        <li><a href="#"><img class="responsive-img" src="/mediafiles/design/message.svg" style="max-width: 22px;"/></a></li>
+                        <li><a href="#"><img class="responsive-img" src="/mediafiles/design/user.svg" style="max-width: 45px;"/></a></li>
+                        <li><a href="#"><img class="responsive-img" src="/mediafiles/design/logout.svg" style="max-width: 22px;"/></a></li>
+                    </ul>
+                </div>
+              </nav>
+            <section id="content" class="container">
+                <div class="row">
+                {% for post in posts %}
+                    {% if forloop.first %}
+                        <div class="col s12">
+                            <div class="first-row">
+                                <div class="first-image">
+                                    <img class="responsive-img" src="/mediafiles/{{ post.src }}"/>
+                                </div>
+                                <div class="first-text">
+                                    <h2 class="active-color main-post__h1">{{ post.name }}</h2>
+                                    <div>{{ post.text|truncatechars:200 }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="row">
+                                <h2 class="main-post__h2 active-color">
+                                    Другие статьи
+                                    <a class="right" href="#">
+                                        <img src="/mediafiles/design/ico_filter.svg" alt="" style="width: 19px">
+                                    </a>
+                                </h2>
+                    {% endif %}
+                    {% if not forloop.first %}
+                        <div class="col s12 l6 xl4">
+                            <div class="card">
+                                <div class="card-image" style="padding: 25px 25px 0;">
+                                    <img src="/mediafiles/{{ post.src }}">
+                                    <span class="card-date">{{ post.created_at|date:"j F Y G:i" }}</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="active-color main-post__h3">{{ post.name }}</h3>
+                                </div>
+                                <div class="card-action">
+                                    <ul class="action-list">
+                                        <li>
+                                            <a href="#">
+                                                <img class="action-list-img" src="/mediafiles/design/ico_like.svg">
+                                                <span class="count-action">34</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img class="action-list-img" src="/mediafiles/design/ico_view.png">
+                                                <span class="count-action">34</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img class="action-list-img" src="/mediafiles/design/ico_message.svg">
+                                                <span class="count-action">34</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if forloop.last %}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                </div>
+            </section>
+        </div>
+    <!-- all scripts now >>> -->
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- << all scripts now -->
+    </body>
 </html>

@@ -1,0 +1,55 @@
+
+.text-logo {
+    font-size: 24px;
+}
+.active-color {
+    color: #315AF2;
+    font-family: 'Museo Cyrl', 'Roboto', sans-serif;
+    font-weight: 900;
+}
+.main-post__h1 {
+    font-size: 45px;
+}
+.main-post__h2 {
+    font-size: 36px;
+}
+.main-post__h3 {
+    font-size: 24px;
+    font-family: 'Circe Rounded', 'Roboto', sans-serif;
+    text-align: center;
+}
+.action-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-right: -24px;
+}
+.action-list-img {
+    display: inline-block;
+    vertical-align: middle;
+}
+.count-action {
+   color: #cdcdcd;
+}
+.card-date {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #b1b1b1;
+    text-shadow: 0 0 10px white;
+    background: #ffffff;
+    padding: 3px;
+    line-height: 1;
+}
+.first-row {
+    display: flex;
+}
+.first-image {
+    order: 1;
+    align-self: flex-end;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+.first-text {
+    width: 150%;
+}
