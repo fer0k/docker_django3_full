@@ -1,11 +1,23 @@
-# docker django3.0.5 full pack for develop and product
-Pre-configured package on Docker containers for development for Nginx, Django3, Gunicorn, Postgresql. + Dev / Prod configuration
+# Тестовое задание для Kodland
+для проекта уже используется раннее настроенное окружение, которым удобно пользоваться
+ в виду постоянных переездов с машины на машину или с машины на сервер.
 
-The kit includes a minimal django application for uploading images to the server.
+Docker позволяет масштабировать уже существующие приложения, не так как kubernetes,
+но этого вполне хватает не забивая себе голову целой прослойкой знаний по другой
+инженерной прослойкой
 
-## Develop
-The current solution uses the built-in features of the django server and works without Gunicorn.
-If you only need a local container, then maybe take a look at another repository
+Не почему иначе я не использую более простое пространство.
+Соответственно ос-разработки является Ubuntu 20.4,
+ поэтому все операции проводились на ней
 
-## Prod
-you need to configure the configuration for your server
+## Предустановленный софт
+необходимо поставить пакет `docker compose` по инструкции 
+с [оф сайта](https://docs.docker.com/compose/install/)
+
+## Запуск
+находясь в корне проекта выполните(возможно с SUDO):
+> `docker-compose up -d --build`
+>
+## Остановка
+находясь в корне проекта выполните(возможно с SUDO):
+> `docker-compose down -v`
