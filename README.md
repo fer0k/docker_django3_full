@@ -35,3 +35,7 @@ Docker позволяет масштабировать уже существую
 ## Остановка
 находясь в корне проекта выполните(возможно с SUDO):
 > `docker-compose down -v`
+
+## Админ
+ делаем маленького админа:  `docker-compose exec web python manage.py createsuperuser`
+ авторизуемся через `/admin/`

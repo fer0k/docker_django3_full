@@ -1,0 +1,10 @@
+<html>
+    <p>Hi there!</p>
+    {% for post in posts %}
+        <p>
+            {{ post.name }}
+            <img src="/mediafiles/{{ post.src }}"/>
+            {{ post.text }}
+        </p>
+    {% endfor %}
+</html>
