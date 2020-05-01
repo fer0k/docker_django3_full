@@ -10,11 +10,15 @@ Docker позволяет масштабировать уже существую
 Соответственно ос-разработки является Ubuntu 20.4,
  поэтому все операции проводились на ней
 
-## Зтягиваем с гита
+## Зтягиваем с гита переключаемся на тестовую ветку
 > `git clone git@github.com:fer0k/docker_django3_full.git django_full`
+>
 > `cd django_full`
-> `git fetch`
+>
+> `git fetch origin test_kodland`
+>
 > `git checkout test_codland`
+>
 > `git pull`
 
 
@@ -25,7 +29,9 @@ Docker позволяет масштабировать уже существую
 ## Запуск
 находясь в корне проекта `django_full` выполните(возможно с SUDO):
 > `docker-compose up -d --build`
->
+
+рабочий вариант на порте 8000 `http://localhost:8000/`
+
 ## Остановка
 находясь в корне проекта выполните(возможно с SUDO):
 > `docker-compose down -v`
