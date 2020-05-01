@@ -10,12 +10,20 @@ Docker позволяет масштабировать уже существую
 Соответственно ос-разработки является Ubuntu 20.4,
  поэтому все операции проводились на ней
 
+## Зтягиваем с гита
+> `git clone git@github.com:fer0k/docker_django3_full.git django_full`
+> `cd django_full`
+> `git fetch`
+> `git checkout test_codland`
+> `git pull`
+
+
 ## Предустановленный софт
 необходимо поставить пакет `docker compose` по инструкции 
 с [оф сайта](https://docs.docker.com/compose/install/)
 
 ## Запуск
-находясь в корне проекта выполните(возможно с SUDO):
+находясь в корне проекта `django_full` выполните(возможно с SUDO):
 > `docker-compose up -d --build`
 >
 ## Остановка
